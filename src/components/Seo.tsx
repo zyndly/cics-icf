@@ -7,14 +7,14 @@ const defaultMeta = {
   description:
     'Official Website of the College of Information and Computer Studdies of Interworld Colleges Foundation Inc.',
   /** Without additional '/' on the end. */
-  url: '',
+  url: 'https://cics-icf.vercel.app/',
   type: 'website',
   robots: 'follow, index',
   /**
    * No need to be filled, will be populated with openGraph function
    * If you wish to use a normal image, just specify the path below
    */
-  image: 'www.cics-icf/images/large-og.png',
+  image: 'https://cics-icf.vercel.app/images/large-og.png',
 };
 
 type SeoProps = {
@@ -45,12 +45,6 @@ export default function Seo(props: SeoProps) {
       <meta property='og:description' content={meta.description} />
       <meta property='og:title' content={meta.title} />
       <meta name='image' property='og:image' content={meta.image} />
-      {/* Twitter */}
-      <meta name='twitter:card' content='summary_large_image' />
-      <meta name='twitter:site' content='@th_clarence' />
-      <meta name='twitter:title' content={meta.title} />
-      <meta name='twitter:description' content={meta.description} />
-      <meta name='twitter:image' content={meta.image} />
       {meta.date && (
         <>
           <meta property='article:published_time' content={meta.date} />
@@ -62,7 +56,7 @@ export default function Seo(props: SeoProps) {
           <meta
             name='author'
             property='article:author'
-            content='Theodorus Clarence'
+            content='College of Information and Computer Studdies'
           />
         </>
       )}
@@ -88,7 +82,6 @@ type Favicons = {
   type?: string;
 };
 
-// !STARTERCONF this is the default favicon, you can generate your own from https://www.favicon-generator.org/ then replace the whole /public/favicon folder
 const favicons: Array<Favicons> = [
   {
     rel: 'apple-touch-icon',
